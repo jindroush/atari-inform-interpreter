@@ -29,9 +29,11 @@ imposed on it. However, all the portions I added or rewrote are placed in the pu
 Main code is in boot.asm, which contains all common code and many conditional assembly commands for
 extended memory, large stack and disk formats. This is the only source which should be assembled, as other
 asm files are directly included (despite their asm extensions).
+
 The files drv_\*.asm and drv_\*.fnt are included depending on VIDEO symbol setting. Asm files contain code for
 each video driver, using unified interface. FNT files are the binary images of the fonts, sourced from 
 various other programs and modified for use with this package.
+
 Release notes (sometimes quite verbose) are in the beginning of boot.asm file.
 
 #### Building:
@@ -71,7 +73,7 @@ capable of running tests on Czech and/or other testing suites.
 #### Links:
 [MADS Assembler](https://github.com/tebe6502/Mad-Assembler/releases)
 
-[MADS Asm English Manual](https://mads.atari8.info/mads_eng.html)
+[MADS Assembler English Manual](https://mads.atari8.info/mads_eng.html)
 
 [Altirra](https://www.virtualdub.org/altirra.html)
 
