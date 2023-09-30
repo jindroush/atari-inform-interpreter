@@ -36,7 +36,7 @@ This example builds **boot.obx**, which should be placed on a double-density ATR
 non-standard size. It uses a software 64-column driver, a large stack, extended memory, and supports Z4 games.
 Adding the story file and necessary ATR headers is the next step, left as an exercise for the user.
 
-### Projects using this code:
+#### Projects using this code:
 This is a multi-menu containing all original Infocom games (except 4 Z6 games):
 https://forums.atariage.com/topic/353724-the-incomplete-works-of-infocom-inc/
 
