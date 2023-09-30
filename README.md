@@ -32,6 +32,7 @@ asm files are directly included (despite their asm extensions).
 The files drv_\*.asm and drv_\*.fnt are included depending on VIDEO symbol setting. Asm files contain code for
 each video driver, using unified interface. FNT files are the binary images of the fonts, sourced from 
 various other programs and modified for use with this package.
+Release notes (sometimes quite verbose) are in the beginning of boot.asm file.
 
 #### Building:
 To compile the code, use MADS and configure various command-line settings:
@@ -72,13 +73,17 @@ capable of running tests on Czech and/or other testing suites.
 
 [MADS Asm English Manual](https://mads.atari8.info/mads_eng.html)
 
-[Z-Tools](http://www.inform-fiction.org/zmachine/ztools.html)
-
-Testing suites: [Czech](http://ifarchive.org/if-archive/infocom/interpreters/tools/czech_0_8.zip), [Praxix](https://ifarchive.org/if-archive/infocom/interpreters/tools/praxix.zip), [Etude](https://ifarchive.org/if-archive/infocom/interpreters/tools/etude.tar.Z), [Strictz](https://ifarchive.org/if-archive/infocom/interpreters/tools/strictz.inf).
+[Altirra](https://www.virtualdub.org/altirra.html)
 
 [Annotated Z-Machine Standards document v1.1](https://zspec.jaredreisinger.com/)
 
-[Altirra](https://www.virtualdub.org/altirra.html)
+[Inform6](https://github.com/DavidKinder/Inform6/releases)
+
+[PunyInform Library](https://github.com/johanberntsson/PunyInform/releases)
+
+Testing suites: [Czech](http://ifarchive.org/if-archive/infocom/interpreters/tools/czech_0_8.zip), [Praxix](https://ifarchive.org/if-archive/infocom/interpreters/tools/praxix.zip), [Etude](https://ifarchive.org/if-archive/infocom/interpreters/tools/etude.tar.Z), [Strictz](https://ifarchive.org/if-archive/infocom/interpreters/tools/strictz.inf).
+
+[Z-Tools](http://www.inform-fiction.org/zmachine/ztools.html)
 
 #### Special Thanks To:
 - Avery Lee for the Altirra emulator
