@@ -67,6 +67,14 @@ especially considering I no longer possess any Atari hardware for testing. You'v
 Feel free to ask any questions, create pull requests etc. It'd be great if you'd have first created the testing environment
 capable of running tests on Czech and/or other testing suites.
 
+#### Links:
+[MADS Assembler](https://github.com/tebe6502/Mad-Assembler/releases)
+[MADS Asm English Manual](https://mads.atari8.info/mads_eng.html)
+[Z-Tools](http://www.inform-fiction.org/zmachine/ztools.html)
+Testing suites: [Czech](http://ifarchive.org/if-archive/infocom/interpreters/tools/czech_0_8.zip), [Praxix](https://ifarchive.org/if-archive/infocom/interpreters/tools/praxix.zip), [Etude](https://ifarchive.org/if-archive/infocom/interpreters/tools/etude.tar.Z), [Strictz](https://ifarchive.org/if-archive/infocom/interpreters/tools/strictz.inf).
+[Annotated Z-Machine Standards document v1.1](https://zspec.jaredreisinger.com/)
+[Altirra](https://www.virtualdub.org/altirra.html)
+
 #### Special Thanks To:
 - Avery Lee for the Altirra emulator
 - Graham Nelson for contributions to Inform and Z-Machine documentation
