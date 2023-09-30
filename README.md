@@ -41,10 +41,10 @@ To compile the code, use MADS and configure various command-line settings:
  - selection of disk format: SD_ONE_SIDE, SD_TWO_SIDE, ED_ONE_SIDE, DD_ONE_SIDE, LONG_MEDIA
  - selection of Z-Machine: ZVER=X, where X is 3, 4, 5, 7, 8
  - selection of video mode: VIDEO=X, where X could be
-   - 1 = built in 40 column mode
-   - 2 = VBXE mode
-   - 3 = software 80 column mode
-   - 4 = software 64 column mode
+   - 1 = hardware 40 column mode (fast, low memory requirements)
+   - 2 = VBXE mode (fast, low memory requirements, best for Z4+ games)
+   - 3 = software 80 column mode (medium speed, high memory requirements)
+   - 4 = software 64 column mode (medium speed, high memory requirements)
  - selection of memory accesses: EXTMEM=X (0 for 48KB base memory, 1 for 130XE compatible extended memory)
  - selection of size of stack: LARGE_STACK=X, where 0 means using 2 pages (256 words) stack, 1 means 8
  pages (1024 words) stack. Large stack is recommended for Z4+ games.
