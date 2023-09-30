@@ -6,8 +6,9 @@ This repository hosts an *Infocom* Z-Machine interpreter for Atari systems. The 
  the latest official version G two-side interpreter, originally sourced from one of the latest Atari 8-bit *Infocom*
  releases, Plundered Hearts. Subsequent updates have expanded its compatibility to run official Z4 and Z5 games,
  though Z6 games (Arthur, Journey, Shogun & Zork Zero) are not supported. Additionally, Z7 & Z8 story files are compatible.
+
 #### Purpose:
-This interpreter empowers Atari users to experience official Z4 & Z5 games by _Infocom,_ previously unavailable
+This interpreter empowers Atari users to experience official Z4 & Z5 games by *Infocom,* previously unavailable
  on this platform. It also opens the door to a wide array of modern homebrew games crafted in the Inform language..
 
 #### Licensing:
@@ -30,9 +31,18 @@ To compile the code, use MADS and configure various command-line settings:
 Example build command:
 
     mads boot.asm -d:DD_ONE_SIDE=1 -d:LONG_MEDIA=1 -d:VIDEO=4 -d:ZVER=4 -d:LARGE_STACK=1 -d:EXTMEM=1 -t:boot.lab -l:boot.lst
+
 This example builds **boot.obx**, which should be placed on a double-density ATR image of 'any' 
 non-standard size. It uses a software 64-column driver, a large stack, extended memory, and supports Z4 games.
- Adding the story file and necessary ATR headers is the next step, left as an exercise for the user.
+Adding the story file and necessary ATR headers is the next step, left as an exercise for the user.
+
+### Projects using this code:
+This is a multi-menu containing all original Infocom games (except 4 Z6 games):
+https://forums.atariage.com/topic/353724-the-incomplete-works-of-infocom-inc/
+
+This is an online generator allowing to upload story file from versions 3, 4, 5, 7 and 8, and generates ZIP file
+with all possible interpreter combinations in ATR format.
+https://forums.atariage.com/topic/354888-infocoms-z-machine-atr-generator/
 
 #### Side note:
 This project represents my first 'large' assembly project for 6502. I haven't worked on Atari programming for over two 
