@@ -155,19 +155,18 @@
 ;				like this. (Inform6 veneer routine CA__Pr didn't work as expected in second 'before' call).
 ;	23_09_18 kubecj	-slightly fixed font3 in s64 driver
 ;	23_09_23 kubecj	0.9.6 s64peedy gonzales build with faster s64 driver
+;	23_11_26 kubecj	0.9.7 slight bugfixes regarding screen outputs, splitting and [more]. Fixes help display in Savoir Faire
 
 
 version_hihi = 0
 version_hi = 9
-version_lo = 6
+version_lo = 7
 
-;bugs
+;known bugs
 ;the buffering is not okay when the unbuffered print does not start on the leftmost column. String then rolls over, instead of printing newline
-;in Savoir Faire there are [more] prompts while displaying help, that's wrong
 
 ;todo
 ;check all out-of-game printing functions and make sure they don't interfere with changes regarding buffering etc.
-;	-there's at least one case when the bug is displayed very early and needs [more] to be pressed several times.
 ;write all-extmem-tester (set portb to X and write X to $4000+X, in second pass verify which ones survived?)
 ;timed input for z4+
 ;terminating characters from header for z5+
@@ -5758,9 +5757,10 @@ opvar_erase_window:
 		LDA	arg1_hi_83
 		CMP	#$FF
 		BNE	oew_1
+		;the second bugfix reported by Stefan Vogt
 		LDA	arg1_lo_82
 		CMP	#$FE
-		BNE	oew_2
+		BEQ	oew_2
 		CMP	#$FF
 		BNE	oew_l
 		JSR	unsplit_window
@@ -7953,6 +7953,14 @@ op0_new_line:
 		AND	#stream_1
 		BEQ	no_char_to_print
 		.endif
+
+		;bugreport from Stefan Vogt
+		;window 1 (upper) is non-scrollable, unbuffered, always
+		;so if we're doing newline up there, we just move pointers
+		;no counting, no [more] pausing
+		LDX	active_window
+		CPX	#1
+		BEQ	not_at_the_screen_end
 
 		INC	lines_printed_since_last_pause_E0
 		LDA	lines_printed_since_last_pause_E0
