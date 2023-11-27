@@ -156,6 +156,7 @@
 ;	23_09_18 kubecj	-slightly fixed font3 in s64 driver
 ;	23_09_23 kubecj	0.9.6 s64peedy gonzales build with faster s64 driver
 ;	23_11_26 kubecj	0.9.7 slight bugfixes regarding screen outputs, splitting and [more]. Fixes help display in Savoir Faire
+;	23_11_27 kubecj	fixed stupid bug in scan_table when called with size of 0 - automatically should return false
 
 
 version_hihi = 0
@@ -5288,6 +5289,10 @@ opvar_scan_table:
 		;arg3 - length of table
 		;arg4 - bit 7 - on = word, off = byte, lower 7 bits = increment [optional]
 
+		LDA	arg3_lo_86
+		ORA	arg3_hi_87
+		BEQ	word_not_found3
+		
 		.if ZVER >= 5
 		LDA	argument_count_81
 		CMP	#4
